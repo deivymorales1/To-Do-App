@@ -4,8 +4,15 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 0;
   font-family: sans-serif;
   background-color: #fff;
+  background: url(fondo.jpeg) no-repeat center center / cover;
 }
 
 .app {
@@ -26,4 +33,35 @@ body {
   background-color: var(--tareas-anyadir);
   border-radius: 5px;
   padding: 5px 10px;
+}
+
+.fa-plus {
+  background-color: #abcea1;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+#tasks {
+  display: grid;
+  gap: 14px;
+}
+
+#tasks div {
+  display: flex;
+  flex-direction: column;
+  background-color: #e2eede;
+  border: 3px solid #abcea1;
+  padding: 5px;
+  border-radius: 6px;
+  gap: 4px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.options i {
+  cursor: pointer;
 }

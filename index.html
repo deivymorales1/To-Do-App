@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App</title>
@@ -14,12 +16,56 @@
   
 
   <div class="app">
-    <h4>To App</h4>
-    <div id="addNew">
+    <h4 class="mb-3">To Do App</h4>
+    <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
       <span>Añada nueva tarea</span>
       <i class="fas fa-plus"></i>
     </div>
-    <h5>Tareas</h5>
+    <h5 class="text-center my-3">Tareas</h5>
+
+  <!--Modal-->
+  <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fs-5" id="exampleModalLabel">
+            Añadir una nueva tarea
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Titulo de la tarea </p>
+          
+          <input class="form-control" type="text" name="" id="textInput">
+          <br>
+          <p>Fecha</p>
+          <input class="form-control" type="date" name="" id="dateInput">
+          <br>
+          <p>Descripcion</p>
+          <textarea class="form-control" name="" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Añadir</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+    <!--Aqui apuntamos con el javascript-->
+    <div id="tasks">
+      <div>
+        <span class="fw-bold">Task1</span>
+        <span class="small text-secondary">2022-1-20</span>
+        <p>going to gym</p>
+        <span class="options">
+          <i class="fas fa-edit"></i>
+          <i class="fas fa-trash-alt"></i>
+        </span>
+      </div>
+
+
+    </div>
   </div>
 
 
