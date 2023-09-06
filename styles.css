@@ -23,6 +23,7 @@ body {
   border-radius: 8px;
   font-size: 1.5rem;
   padding: 1.5rem;
+  overflow-y: scroll;
 }
 
 #addNew {
@@ -64,4 +65,9 @@ body {
 
 .options i {
   cursor: pointer;
+}
+
+#msg {
+  color: red;
+  font-size: 0.8rem;
 }
